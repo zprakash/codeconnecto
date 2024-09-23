@@ -458,58 +458,7 @@ p {
 /* End Projects section */
 
 /* About Section */
-#about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-}
 
-#about .col-left {
-	width: 250px;
-	height: 360px;
-}
-
-#about .col-right {
-	width: 100%;
-}
-
-#about .col-right h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	margin-bottom: 10px;
-}
-
-#about .col-right p {
-	margin-bottom: 20px;
-}
-
-#about .col-right .cta {
-	color: black;
-	margin-bottom: 50px;
-	padding: 10px 20px;
-	font-size: 2rem;
-}
-
-#about .col-left .about-img {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	border: 10px solid white;
-}
-
-#about .col-left .about-img::after {
-	content: '';
-	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
-	border: 7px solid crimson;
-	z-index: -1;
-}
 
 /* End About Section */
 
@@ -706,98 +655,11 @@ p {
 	/* End Project */
 
 	/* About */
-	#about .about {
-		flex-direction: row;
-	}
 
-	#about .col-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
-
-	#about .about .col-left .about-img::after {
-		left: -45px;
-		top: 34px;
-		height: 98%;
-		width: 98%;
-		border: 10px solid crimson;
-	}
-
-	#about .col-right {
-		text-align: left;
-		padding: 30px;
-	}
-
-	#about .col-right h1 {
-		text-align: left;
-	}
-
-
-
-	.containerr {
-		text-align: center;
-		max-width: 1200px;
-		margin: auto;
-	}
-
-	h1 {
-		margin-bottom: 40px;
-	}
-
-	.team-row {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap; /* Allow items to wrap */
-		margin-bottom: 40px;
-	}
-
-	.team-member {
-		margin: 0 15px;
-		text-align: center;
-		flex: 1 1 200px; /* Allow flexibility and set a base width */
-	}
-
-	.team-member img {
-		width: 300px; /* Adjust size as needed */
-		height: 300px; /* Keep square for round effect */
-		border-radius: 50%; /* Makes the image round */
-		object-fit: cover; /* Ensures the image covers the area */
-	}
-
-	h3 {
-		margin: 10px 0 5px;
-		font-size: x-large;
-	}
-
-	p {
-		margin: 0;
-		color: #666;
-		font-size: medium;
-	}
-
-	/* Media query for mobile devices */
-	@media (max-width: 768px) {
-		.team-row {
-			flex-direction: column; /* Stack items vertically */
-			align-items: center; /* Center items */
-		}
-
-		.team-member {
-			margin: 15px 0; /* Add margin for vertical spacing */
-		}
-
-		.team-member img {
-			width: 80%; /* Adjust image size to fit smaller screens */
-			height: auto; /* Maintain aspect ratio */
-			max-width: 300px; /* Set a max width for images on mobile */
-			border-radius: 50%; /* Ensure images remain circular */
-		}
-	}
 	
 
-
-
+	/* Media query for mobile devices */
+	
 	/* End About */
 
 	/* contact  */
@@ -839,6 +701,91 @@ p {
 	}
 
 	/* End contact  */
+}
+
+
+/*About */
+
+.containerr {
+	text-align: center;
+	max-width: 1200px;
+	margin: auto;
+}
+
+h1 {
+	margin-bottom: 40px;
+}
+
+.team-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.team-member {
+	margin: 0 20px;
+	text-align: center;
+	flex: 1 1 200px; /* Allow flexibility and set a base width */
+}
+
+.team-member .igg {
+	width: 300px; /* Adjust size as needed */
+	height: 300px; /* Keep square for round effect */
+	border-radius: 50%; /* Makes the image round */
+	object-fit: cover; /* Ensures the image covers the area */
+}
+
+h3 {
+	margin: 10px 0 5px;
+	font-size: x-large;
+}
+
+p {
+	margin: 0;
+	color: #666;
+	font-size: medium;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        margin-bottom: 3rem;/* Smaller font for medium screens */
+    }
+	.team-member {
+		margin-bottom: 40px;
+	}
+
+    .team-member img {
+        width: 120; /* Smaller images for medium screens */
+        height: 120px;
+		border-radius: 50%;
+		
+    }
+
+    h3 {
+        font-size: 2em; /* Smaller font for team member names */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Even smaller font for mobile screens */
+    }
+
+    .team-member {
+        flex: 1 1 100%; /* One per row on mobile screens */
+        margin-bottom: 20px; /* Space between members */
+    }
+
+    .team-member img {
+        width: 70px; /* Smaller images for mobile screens */
+        height: 70px; /* Keep square for round effect */
+    }
+
+    h3 {
+        font-size: 1em; /* Smaller font for team member names */
+    }
 }
 
 /* End Media Query For Tablet */
